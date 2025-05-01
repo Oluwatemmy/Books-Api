@@ -61,3 +61,5 @@ class BookAPITestCase(APITestCase):
         url = reverse('book-delete', args=[9999])
         response = self.client.delete(url)
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
+
+# remaining for the update book test case
