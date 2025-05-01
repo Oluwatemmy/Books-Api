@@ -65,7 +65,7 @@ class DeleteBookView(DestroyAPIView):
             return Response({"message": "Book deleted."}, status=status.HTTP_200_OK)
         except Book.DoesNotExist:
             return Response(
-                {"error": "Book not found."}, status=status.HTTP_400_BAD_REQUEST
+                {"error": "Book not found."}, status=status.HTTP_404_NOT_FOUND
             )
         
 class UpdateBookView(UpdateAPIView):
